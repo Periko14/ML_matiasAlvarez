@@ -1,0 +1,321 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+
+/* Estilos generales */
+
+
+header {
+    background-color: #FFE600;
+    padding: 20px 20px;
+       
+    
+    border-bottom: 2px solid #CCCCCC;
+}
+
+.seccion1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px 20px 50px;
+    width: 100%;
+    }
+
+.seccion2{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 0px 50px;
+    }
+
+.logo img {
+   
+    height: 70px;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 20px;
+    width: 1190px;
+}
+
+.search-bar input[type="text"] {
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar button {
+    display: flex;
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    border-left: none;
+    padding: 8px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+
+nav {
+    
+    display: flex;
+    flex-direction: row;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+
+.user-actions {
+    padding: 0px 0px 0px 1015px;
+    text-align: right;
+}
+
+.user-actions li {
+    margin-right: 10px;
+    
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+
+.burger-menu {
+    display: none; /* Ocultamos el icono de hamburguesa por defecto */
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Mostramos el icono de hamburguesa en dispositivos móviles */
+    }
+
+    nav {
+        display: none; /* Ocultamos el nav principal en dispositivos móviles */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #FFE600;
+        width: 100%;
+        z-index: 1000;
+        border-bottom: 2px solid #CCCCCC;
+    }
+
+    nav.open {
+        display: block; /* Mostramos el nav al hacer clic en el icono de hamburguesa */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0px 0px 30px 0px;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+}
+
+
+
+footer {
+    width: 100%;
+    
+    justify-content: center;
+    
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+i {
+    
+    color: #555;
+    transition: color 0.3s ease;
+}
+i:hover {
+    color: #007bff; /* Cambia el color al pasar el cursor */
+}
+
+footer div {
+   
+    text-align: center;
+    margin: 30px 20px;
+}
+
+footer div h4 {
+    margin-bottom: 10px;
+}
+
+footer div p {
+    color: #666;
+    font-size: 14px;
+}
+
+footer div i {
+    font-size: 24px;
+    color: #EAC926;
+    margin-bottom: 10px;
+}
+
+.container{
+    display: flex;
+}
+
+.payment{
+    width: 30%;
+}
+
+
+
+.copy {
+    background-color: #ffffff;
+    text-align: center;
+    
+   
+}
