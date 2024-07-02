@@ -46,15 +46,44 @@
         </header>
         
         <main class="login">
-            <form action="/" method="POST">
-                <input type="text" name="user" placeholder="Nombre de usuario">
-                <input type="password" name="pass" placeholder="Elegí tu contraseña">
-                <input type="submit" value="Enviar">
-                <!-- Mensaje de error ejemplo -->
-                <div class="error-message">El nombre de usuario es obligatorio.</div>
+            <form id="loginForm" action="home.html" method="POST">
+                <input type="text" id="user" name="user" placeholder="Nombre de usuario">
+                <div class="error-message" id="userError">El nombre de usuario debe tener al menos 2 caracteres.</div>
+                <input type="password" id="pass" name="pass" placeholder="Elegí tu contraseña">
+                <div class="error-message" id="passError">La contraseña debe tener al menos 6 caracteres.</div>
+                <input class="enviar" type="submit" value="Enviar">
             </form>
         </main>
-        
+    
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                let isValid = true;
+                
+                // Validación del nombre de usuario
+                const user = document.getElementById('user').value;
+                const userError = document.getElementById('userError');
+                if (user.length < 2) {
+                    userError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    userError.style.display = 'none';
+                }
+                
+                // Validación de la contraseña
+                const pass = document.getElementById('pass').value;
+                const passError = document.getElementById('passError');
+                if (pass.length < 6) {
+                    passError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    passError.style.display = 'none';
+                }
+                
+                // Si no es válido, prevenir el envío del formulario
+                if (!isValid) {
+                    event.preventDefault();
+                }
+            });
         </script>
         <footer>
             <div class="payment">

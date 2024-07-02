@@ -118,16 +118,49 @@ nav ul li a {
     display: none; /* Ocultamos el icono de hamburguesa por defecto */
 }
 
+/* Media query para pantallas de hasta 768px */
 @media (max-width: 768px) {
     .burger-menu {
         display: block; /* Mostramos el icono de hamburguesa en dispositivos móviles */
+    }
+
+    .seccion1, .seccion2 {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+
+    .logo img {
+        width: 100%;
+        /* Ajustamos el tamaño del logo */
+        margin-right: 600px;
+        
+    }
+
+    .search-bar {
+        width: 90%;
+        
+    }
+
+    .search-bar input[type="text"] {
+        width: 65%;
+        font-size: 12px;
+    }
+
+    .search-bar button {
+        width: 15%;
+    }
+    
+    h5{
+        margin: 10px 10px 10px 0px;
     }
 
     nav {
         display: none; /* Ocultamos el nav principal en dispositivos móviles */
         position: absolute;
         top: 60px;
-        left: 0;
         background-color: #FFE600;
         width: 100%;
         z-index: 1000;
@@ -147,8 +180,16 @@ nav ul li a {
     nav ul li {
         margin: 10px 0;
     }
-}
 
+    .user-actions {
+        padding: 0;
+        text-align: center;
+    }
+
+    .user-actions li {
+        margin: 5px 0;
+    }
+}
 
 .price{
     font-size: 18px;
@@ -227,6 +268,14 @@ article div.main-article{
     padding: 15px;
 }
 
+article .fa-truck {
+    transition: transform 0.3s ease;
+}
+
+article:hover .fa-truck {
+    transform: rotate(-90deg);
+}
+
 @media (min-width: 361px){
     main section article .description{
         display: block;
@@ -262,7 +311,7 @@ article div.main-article{
     }
 }
 
-
+/*FOOTER*/
 
 footer {
     width: 100%;
@@ -318,4 +367,25 @@ footer div i {
     text-align: center;
     
    
+}
+
+/* Media query para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambiamos la dirección a columna */
+        align-items: center; /* Centramos los elementos */
+    }
+
+    .payment {
+        width: 90%; /* Ajustamos el ancho para que ocupen más espacio en pantallas pequeñas */
+        margin-bottom: 20px; /* Añadimos margen inferior para separar las secciones */
+    }
+
+    footer div {
+        margin: 20px 10px; /* Ajustamos el margen para pantallas más pequeñas */
+    }
+
+    .copy {
+        font-size: 12px; /* Ajustamos el tamaño de la fuente para el texto de copyright */
+    }
 }
